@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy">
+  <link rel="stylesheet" href="./css/flex.css">
+  <title>盒模型</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fcfcfc;
+    }
+
+    body {
+      padding: 20px 50px;
+    }
+
+    .blank {
+      height: 10px;
+    }
+
+    .content {
+      padding: 10px;
+      border: 1px dashed #eee;
+      background: rgba(228, 226, 229, 0.23921568627450981);
+      box-shadow: 0 0 5px 0 #eee;
+    }
+
+    .red {
+      background: salmon
+    }
+
+    .box {
+      height: 100px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>1、盒模型演示</h3>
+  <div class="content">
+    <div class="box red flex-all-center">内容</div>
+  </div>
+</body>
+
+</html>

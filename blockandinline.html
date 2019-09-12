@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy">
+  <title>内联元素和块级元素</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fcfcfc;
+    }
+
+    body {
+      padding: 20px 50px;
+    }
+
+    .blank {
+      height: 10px;
+    }
+
+    .content {
+      padding: 10px;
+      border: 1px dashed #eee;
+      background: rgba(228, 226, 229, 0.23921568627450981);
+      box-shadow: 0 0 5px 0 #eee;
+    }
+
+    .red {
+      background: salmon
+    }
+
+    .blue {
+      background: cornflowerblue
+    }
+  </style>
+</head>
+
+<body>
+  <h3>1、块级元素和行内元素的区别</h3>
+  <div class="content">
+    <div class="red">我是一个块级元素</div>
+    <div class="blank"></div>
+    <span class="blue">我是一个行内元素</span>
+  </div>
+</body>
+
+</html>

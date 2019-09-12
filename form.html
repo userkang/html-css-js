@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>form表单</title>
+</head>
+
+<body>
+  <h1>表单演示</h1>
+  <form method="post" action="">
+    <label for="username">用户名:</label>
+    <input type="text" name="username" id="username" value="" />
+
+    <br>
+
+    <label for="pass">密码:</label>
+    <input type="password" name="pass" id="pass" value="" />
+
+    <br><br>
+    
+    <label>性别:</label>
+    <label>男</label>
+    <input type="radio" value="1" name="gender" />
+    <label>女</label>
+    <input type="radio" value="2" name="gender" />
+    
+    <br><br>
+
+    <label>爱好:</label>
+    <select>
+      <option value="看书">看书</option>
+      <option value="旅游" selected="selected">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+
+    <br><br>
+
+    你对什么运动感兴趣：<br>
+    <label for="male">慢跑</label>
+    <input type="checkbox" name="sport" id="manpao" />
+    <br />
+    <label for="female">登山</label>
+    <input type="checkbox" name="sport" id="dengshan" />
+    <br />
+     <label for="female">篮球</label>
+    <input type="checkbox" name="sport" id="lanqiu" />
+    
+    <br><br>
+    
+    <label style="vertical-align: top">个人简介：</label>
+    <textarea cols="30" rows="5">在这里输入内容...</textarea>
+    
+    <br><br>
+    
+    <input type="submit" value="确定" name="submit" />
+    <input type="reset" value="重置" name="reset" />
+  </form>
+</body>
+
+</html>

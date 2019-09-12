@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy">
+  <link rel="stylesheet" href="flex.css">
+  <title>flex演示</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fcfcfc;
+    }
+
+    body {
+      padding: 20px 50px;
+    }
+
+    .blank {
+      height: 10px;
+    }
+
+    .content {
+      padding: 10px;
+      border: 1px dashed #eee;
+      background: rgba(228, 226, 229, 0.23921568627450981);
+      box-shadow: 0 0 5px 0 #eee;
+    }
+
+    .red {
+      background: salmon
+    }
+
+    .blue {
+      background: cornflowerblue
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3>1、flex容器默认水平流方向</h3>
+  <div class="content">
+    <div class="flex">
+      <div class="red" style="width: 200px">
+        固定宽度子元素
+      </div>
+      <div class="flex-item blue" class="blue">
+        自动缩放宽度子元素
+      </div>
+    </div>
+  </div>
+
+  <h3>2、flex容器垂直流方向</h3>
+  <div class="content">
+    <div class="flexcol blue" style="height: 100px;">
+      <div class="red">
+        固定宽度子元素
+      </div>
+      <div class="flex-item blue" class="blue">
+        自动缩放宽度子元素
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>3、flex 垂直居中</h3>
+  <div class="content">
+    <div class="flex-v-center" style="height: 100px; background: cornflowerblue">
+      <div style="background: salmon">
+        我是子元素，正在垂直居中
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>4、flex 垂直居中</h3>
+  <div class="content">
+    <div class="flex-all-center" style="height: 100px;background: cornflowerblue">
+      <div style="background: salmon">
+        我是子元素，正在水平垂直居中
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>5、flex 垂直居中</h3>
+  <div class="content">
+    <div class="flex-all-center" style="height: 100px;background: cornflowerblue">
+      <div style="background: salmon">
+        我是子元素，正在水平垂直居中
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
