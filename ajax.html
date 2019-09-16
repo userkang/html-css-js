@@ -1,38 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" />
+    <title>ajax</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy">
-  <link rel="stylesheet" href="flex.css">
-  <title>ajax</title>
-</head>
+  <body></body>
+  <!-- <script>
+    // 获取对象
+    var request = new XMLHttpRequest()
 
-<body>
+    // 指定请求
+    request.open('GET', 'http://127.0.0.1:8888/', true)
 
-
-
-</body>
-<script>
-  var request = new XMLHttpRequest();
-  request.open('GET', '/my/url', true);
-
-  request.onload = function () {
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = JSON.parse(request.responseText);
-    } else {
-      // We reached our target server, but it returned an error
-
+    // 取得响应
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        // Success!
+        alert(request.responseText)
+      } else {
+        // We reached our target server, but it returned an error
+      }
     }
-  };
 
-  request.onerror = function () {
-    // There was a connection error of some sort
-  };
+    request.onerror = function() {
+      // There was a connection error of some sort
+    }
 
-  request.send();
-</script>
+    // 发起响应
+    request.send()
+  </script> -->
 
+  <!-- <script>
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:8888/',
+      data: {},
+      success: function(result) {
+        //TODO RESULT
+        alert(result)
+      }
+    })
+  </script> -->
+
+  <!-- <script>
+    let getData = function(url) {
+      return new Promise(function(resolve, reject) {
+        $.ajax({
+          type: 'GET',
+          url: url,
+          success: function(data) {
+            resolve(data)
+          },
+          error: function(err) {
+            reject(err)
+          }
+        })
+      })
+    }
+
+    var data = getData('http://127.0.0.1:8888/').then(function(data) {
+      alert(data)
+      //TODO DATA
+    })
+  </script> -->
+
+  <!-- <script>
+    let it = null
+    let ajax = function(url, data) {
+      $.ajax({
+        type: 'GET',
+        url: url,
+        data: data || {},
+        success: function(result) {
+          it.next(result)
+        }
+      })
+    }
+
+    function* getData() {
+      var data = yield ajax('http://127.0.0.1:8888/')
+      alert(data)
+    }
+
+    it = getData()
+    it.next()
+  </script> -->
+
+  <!-- <script>
+    let ajax = function(url, data) {
+      return $.ajax({
+        type: 'GET',
+        url: url,
+        data: data || {}
+      })
+    }
+
+    async function getData() {
+      var data = await ajax('http://127.0.0.1:8888/')
+      alert(data)
+    }
+
+    getData()
+  </script> -->
 </html>

@@ -1,105 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" />
+    <link rel="stylesheet" href="./css/flex.css" />
+    <title>flex演示</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fcfcfc;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy">
-  <link rel="stylesheet" href="flex.css">
-  <title>flex演示</title>
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fcfcfc;
-    }
+      body {
+        padding: 20px 50px;
+      }
 
-    body {
-      padding: 20px 50px;
-    }
+      .blank {
+        height: 10px;
+      }
 
-    .blank {
-      height: 10px;
-    }
+      .content {
+        padding: 10px;
+        border: 1px dashed #eee;
+        background: rgba(228, 226, 229, 0.23921568627450981);
+        box-shadow: 0 0 5px 0 #eee;
+      }
 
-    .content {
-      padding: 10px;
-      border: 1px dashed #eee;
-      background: rgba(228, 226, 229, 0.23921568627450981);
-      box-shadow: 0 0 5px 0 #eee;
-    }
+      .red {
+        background: salmon;
+      }
 
-    .red {
-      background: salmon
-    }
+      .blue {
+        background: cornflowerblue;
+      }
+    </style>
+  </head>
 
-    .blue {
-      background: cornflowerblue
-    }
-  </style>
-</head>
-
-<body>
-
-  <h3>1、flex容器默认水平流方向</h3>
-  <div class="content">
-    <div class="flex">
-      <div class="red" style="width: 200px">
-        固定宽度子元素
-      </div>
-      <div class="flex-item blue" class="blue">
-        自动缩放宽度子元素
+  <body>
+    <h4>.flex flex容器默认水平流方向</h4>
+    <div class="content">
+      <div class="flex">
+        <div class="red flex-item">item</div>
+        <div class="flex-item blue">item</div>
       </div>
     </div>
-  </div>
 
-  <h3>2、flex容器垂直流方向</h3>
-  <div class="content">
-    <div class="flexcol blue" style="height: 100px;">
-      <div class="red">
-        固定宽度子元素
-      </div>
-      <div class="flex-item blue" class="blue">
-        自动缩放宽度子元素
+    <h4>.flecol flex容器垂直流方向</h4>
+    <div class="content">
+      <div class="flexcol" style="height: 100px">
+        <div class="flex-item red">item</div>
+        <div class="flex-item blue">item</div>
       </div>
     </div>
-  </div>
 
-
-
-  <h3>3、flex 垂直居中</h3>
-  <div class="content">
-    <div class="flex-v-center" style="height: 100px; background: cornflowerblue">
-      <div style="background: salmon">
-        我是子元素，正在垂直居中
+    <h4>.flex-v-center 相对于外容器呈一行垂直居中，水平居左</h4>
+    <div class="content">
+      <div class="flex-v-center blue" style="height: 100px;">
+        <div class="red">item</div>
       </div>
     </div>
-  </div>
 
-
-
-  <h3>4、flex 垂直居中</h3>
-  <div class="content">
-    <div class="flex-all-center" style="height: 100px;background: cornflowerblue">
-      <div style="background: salmon">
-        我是子元素，正在水平垂直居中
+    <h4>.flexcol-h-center 相对外容器呈列垂直底部对齐，水平居中</h4>
+    <div class="content">
+      <div class="flexcol-h-center blue" style="height: 100px;">
+        <div class="red">item</div>
       </div>
     </div>
-  </div>
 
-
-
-  <h3>5、flex 垂直居中</h3>
-  <div class="content">
-    <div class="flex-all-center" style="height: 100px;background: cornflowerblue">
-      <div style="background: salmon">
-        我是子元素，正在水平垂直居中
+    <h4>.flexcol-v-center 相对外容器呈列垂直居中，水平居左</h4>
+    <div class="content">
+      <div class="flexcol-v-center blue" style="height: 100px;">
+        <div class="red">item</div>
+        <div class="red">item</div>
+        <div class="red">item</div>
       </div>
     </div>
-  </div>
 
+    <h4>.flex-h-center 相对于外容器呈一行垂直顶部对齐，水平居中</h4>
+    <div class="content">
+      <div class="flex-h-center blue" style="height: 100px;">
+        <div class="red">item</div>
+        <div class="red">item</div>
+        <div class="red">item</div>
+      </div>
+    </div>
 
-</body>
+    <h4>
+      .flex-justify-v-center 伸缩项目相对外容器呈一行垂直居中，水平两端对齐
+    </h4>
+    <div class="content">
+      <div class="flex-justify-v-center blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
 
+    <h4>.flex-h-justify 相对于外容器一行垂直顶部对齐，水平两端对齐</h4>
+    <div class="content">
+      <div class="flex-h-justify blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>.flex-v-end 相对于外容器呈一行垂直底部对齐，水平居左</h4>
+    <div class="content">
+      <div class="flex-v-end blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>.flex-end-v-center 伸缩项目相对外容器呈一行垂直居中，水平居右</h4>
+    <div class="content">
+      <div class="flex-end-v-center blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>.flex-all-center 相对外容器呈一行垂直居中，水平居中</h4>
+    <div class="content">
+      <div class="flex-all-center blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>.flexcol-all-center 相对外容器呈列垂直居中，水平居中</h4>
+    <div class="content">
+      <div class="flexcol-all-center blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>
+      .flexcol-justify-h-center 伸缩项目相对外容器呈列垂直两端对齐，水平居中
+    </h4>
+    <div class="content">
+      <div class="flexcol-justify-h-center blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+
+    <h4>.flexcol-justify 伸缩项目相对外容器呈列垂直两端对齐，水平居左</h4>
+    <div class="content">
+      <div class="flexcol-justify blue" style="height: 100px;">
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+        <div class="red" style="width: 50px">item</div>
+      </div>
+    </div>
+  </body>
 </html>

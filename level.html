@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS选择器</title>
+    <style>
+      /* 标签选择器 */
+      body {
+        margin: 20px 100px;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 #eee;
+        text-align: center;
+      }
+
+      #title {
+        font-size: 20px;
+      }
+      .title {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 12px;
+      }
+
+      h2 {
+        font-size: 32px !important;
+      }
+
+      /* 只有以color/font-/text-/line开头的属性才可以继承 */
+      h3 {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 id="title" class="title" style="font-size: 24px">秋登宣城谢眺北楼</h2>
+    <h3>——李白</h3>
+
+    <p>两水夹明镜，</p>
+    <p>双桥落彩虹。</p>
+    <p>人烟寒橘柚，</p>
+    <p>秋色老梧桐。</p>
+
+    <img src="./img/1.jpg" width="250" alt="诗篇" />
+  </body>
+</html>

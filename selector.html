@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS选择器</title>
+    <style>
+      /* 标签选择器 */
+      body {
+        margin: 20px 100px;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 #eee;
+        text-align: center;
+      }
+
+      h2::before,
+      h2::after {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background: #333;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+      }
+
+      p:first-of-type {
+        border: 1px solid #ccc;
+      }
+
+      p::first-letter {
+        color: cornflowerblue;
+      }
+    </style>
+  </head>
+
+  <body id="body" class="body" data-js="body">
+    <h2>秋登宣城谢眺北楼</h2>
+    <h3>——李白</h3>
+
+    <p>两水夹明镜，</p>
+    <p>双桥落彩虹。</p>
+    <p>人烟寒橘柚，</p>
+    <p>秋色老梧桐。</p>
+
+    <img src="./img/1.jpg" width="250" alt="诗篇" />
+  </body>
+</html>
